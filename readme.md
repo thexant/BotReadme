@@ -67,6 +67,7 @@ The deployment system allows players to share their current status, form groups,
 | `/deploy difficulty` | Update just your difficulty setting |
 | `/deploy grinding` | Toggle grinding status for resources |
 | `/deploy ping` | Toggle LFG role ping |
+| `/deploy until` | Change your automatic undeploy time (24HR format) |
 | `/deploy privacy` | Toggle whether others can join your lobby |
 
 #### Group Management
