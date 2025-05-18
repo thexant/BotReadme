@@ -49,7 +49,7 @@ The deployment system allows players to share their current status, form groups,
 | Command | Description |
 |---------|-------------|
 | `/deploy me` | Set your status to deployed with optional parameters (faction, planet, difficulty, etc.) |
-| `/deploy standby` | Mark yourself as available to join others (LFG status) |
+| `/deploy standby` | Mark yourself as standby and waiting to deploy/group up.|
 | `/deploy with` | Update your deployment group without changing other details |
 | `/undeploy` | Remove your deployment status |
 | `/status` | Check your current deployment status |
