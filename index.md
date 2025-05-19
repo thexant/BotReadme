@@ -123,8 +123,7 @@ Track achievements and awards with the medal system.
 
 | Command | Description |
 |---------|-------------|
-| `/medal` | View your medals |
-| `/medal view` | View someone else's medals |
+| `/medal view` | View your or someone else's medals |
 | `/medal details` | View details for a specific medal |
 | `/medal leaderboard` | Show the server's medal leaderboard |
 
