@@ -79,6 +79,8 @@ The deployment system allows players to share their current status, form groups,
 | `/sos` | Toggle SOS mode for urgent backup |
 | `/setgroupname` | Give your current squad a custom name |
 | `/squadvc` | Create a temporary squad voice channel |
+| `/commend` | Commend a user for teamwork, cooperation, or fun. Saves to a server leaderboard |
+| `/commendationsleaderboard` | Shows the aformentioned Leaderboard. |
 
 #### Configuration
 
@@ -142,6 +144,7 @@ Create and customize your Helldiver profile card.
 | `/helldiverinfo set-quote` | Update your player card quote |
 | `/helldiverinfo set-stratagem` | Set your favorite non-support stratagem |
 | `/helldiverinfo set-support` | Set your favorite support weapon |
+| `/helldiverinfo set-level` | Change your level (Level up) |
 
 ### War Orders
 
@@ -206,6 +209,8 @@ These commands are styled to fit the Helldivers theme:
 | `/silentundeployuser` | Clear a user's status without notification |
 | `/cleardissidentscore` | Reset a user's dissident report count |
 | `/birthday` | Send an overdramatic birthday greeting to a user |
+| `/resetcommendations` | Reset a users commendation score |
+| `/servercommendationsreset` | Reset commendations for your entire server |
 
 ### Active List Management
 
