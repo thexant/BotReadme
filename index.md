@@ -1,4 +1,4 @@
-# HD2 Utility Bot - Comprehensive Documentation
+# HD2 Utility Bot - Documentation
 
 Welcome to the HD2 Utility Bot documentation! This Discord bot provides a comprehensive suite of features to enhance your Helldivers 2 server experience, including deployment tracking, stratagem crafting, attack coordination, medal systems, and more.
 
@@ -78,7 +78,7 @@ The deployment system allows players to share their current status, form groups,
 | `/respond` | Respond to an SOS call |
 | `/sos` | Toggle SOS mode for urgent backup |
 | `/setgroupname` | Give your current squad a custom name |
-| `/squadvc` | Create a temporary squad voice channel |
+| `/squadvc` | Create a temporary squad voice channel, alternatively, create one with `/deploy me [vc_name]`|
 | `/commend` | Commend a user for teamwork, cooperation, or fun. Saves to a server leaderboard |
 | `/commendationsleaderboard` | Shows the aformentioned Leaderboard. |
 
