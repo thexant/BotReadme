@@ -38,6 +38,8 @@ This comprehensive guide covers all features of the Helldivers 2 Utility Bot, de
   - [Stats & Orders Management](#stats--orders-management)
 - [Support & Credits](#support--credits)
 
+
+
 ## Getting Started
 
 The HD2 Utility Bot uses Discord's slash command system. Type `/` followed by the command name to use any feature.
@@ -52,6 +54,19 @@ As a user, start by:
 1. Using the **Quick Deploy** button or `/deploy me` to set your status
 2. Check who's playing with `/active`
 3. Create your Helldiver profile card with `/helldiverinfo create`
+
+
+## ⚠️ Quick Setup Summary (Admins, Read This First)
+
+Before anything else:
+1. **DO NOT** set `/setminigamechannel` to your LFG or chat channels. It should be an isolated, low-traffic channel.
+2. **DO NOT** assign general roles like `@everyone` or `@here` as LFG roles.
+   - Use a specific role like `@LFG`, `@ReadyUp`, or `@HD Players`
+   - If unsure, create a new one just for LFG pings.
+
+Proper setup ensures channels aren’t spammed and players don’t get irrelevant pings.
+
+---
 
 ## Deployment System
 
@@ -550,8 +565,8 @@ The supplies are categorized as:
 In the designated minigame channel, craft stratagems by typing their directional sequences:
 
 Examples:
-- `↑→↓←` - Craft a Reinforce stratagem
-- `↑→→↓↑↑←→` - Craft an Orbital Precision Strike
+- `→→↑` - Craft an Orbital Precision Shell
+- `↑→↓↓↓` - Craft an Eagle 500kg Bomb
 
 Each successfully crafted stratagem is added to your inventory, which you can view with:
 ```
@@ -594,53 +609,67 @@ Possible contents:
 
 Admins can manually spawn pods with specific contents for events or rewards.
 
+### ⚠️ Important Setup Note
+> The `/setminigamechannel` command must **not** be used in high-traffic channels (like LFG or general chat). This channel will receive:
+> - Stratagem crafting inputs
+> - Escape pod messages
+> - Booster messages
+> - Supply contribution messages
+>
+> Choose or create a **dedicated minigame channel** for these features to prevent clutter and confusion.
+
+(*Keep rest of minigames section unchanged*)
+
+---
 ## Administration
 
 ### Initial Server Setup
 
-As a server admin, run these commands to configure the bot:
+**1. Set Deployment Channel**
+```
+/setchannel #deployment-channel
+```
+- Sends deployment status, SOS alerts, and Quick Deploy buttons
+- Should be a central channel, dedicated to users looking to group up.
 
-1. **Set deployment channel**:
-   ```
-   /setchannel #deployment-channel
-   ```
-   This channel will receive deployment statuses, SOS alerts, and the Quick Deploy button.
+**2. Set Minigame Channel**
+```
+/setminigamechannel #minigames
+```
+- ❌ **Never use LFG or a General Chat**
+- ✅ Use a dedicated channel (e.g., `#stratagem-lab`, `#minigames`, `#stratagem-clicker`, `#bot-minigames`)
 
-2. **Set minigame channel**:
-   ```
-   /setminigamechannel #minigames
-   ```
-   This channel will be used for stratagem crafting, escape pods, and attack notifications.
+**3. Set Welcome Channel**
+```
+/setwelcomechannel #welcome
+```
+- New members get a brief greeting embed here
 
-3. **Set welcome channel**:
-   ```
-   /setwelcomechannel #welcome
-   ```
-   New members will receive a welcome message in this channel.
+**4. Configure VC Category**
+```
+/setvccategory "Squad Channels"
+```
+- Admins can use this to select which category new voice channels will be created under.
 
-4. **Configure voice channel category**:
-   ```
-   /setvccategory "Squad Channels"
-   ```
-   This category will contain temporary squad voice channels.
+**5. Set LFG Role**
+```
+/enablelfg @LFG
+```
+- ❌ Do NOT use `@everyone` or roles that include every server member
+- ✅ Create a new role if necessary (`@Helldivers`, `@LFG`, `@deployments`)
 
-5. **Set up LFG role**:
-   ```
-   /enablelfg @LFG
-   ```
-   This role will be pinged when players request groups.
+**6. Set Grinding Role (optional)**
+```
+/enablegrindrole @Grinding
+```
+- Like the LFG role, this should be a **specific role**, not a general one
 
-6. **Set up grinding role** (optional):
-   ```
-   /enablegrindrole @Grinding
-   ```
-   This role will be pinged for resource farming groups.
-
-7. **Set stats counters** (optional):
-   ```
-   /setstatuscounters deployed_channel:"Deployed Count" standby_channel:"Standby Count" assist_channel:"Assisting Count"
-   ```
-   Creates voice channels that display real-time counts of player statuses.
+**7. (Optional) Configure Status Counters**
+```
+/setstatuscounters deployed_channel:"Deployed Count" standby_channel:"Standby Count" assist_channel:"Assisting Count"
+```
+- These should be voice channels that are dedicated, in view, not mixed with other channels and set so that users cannot connect, but can see.
+---
 
 ### Channel Configuration
 
@@ -663,6 +692,8 @@ Detailed explanation of channel setup commands:
 
 - `/orders channel` - Sets the current channel for order notifications
 
+- Keep deployment and minigame activity separate from main server activity channels.
+
 ### Role Management
 
 - `/enablelfg @Role` - Sets the role to ping for LFG notifications
@@ -677,6 +708,17 @@ Detailed explanation of channel setup commands:
   - Useful for organizing farming groups
 
 - `/disablegrindrole` - Removes the grinding role setting
+
+**✅ GOOD Role Examples:**
+- `@LFG`, `@HD Players`, `@Ready to Drop`
+
+**❌ BAD Role Examples:**
+- `@everyone`, `@Members`, `@Gamers` (broad roles)
+
+Explain the purpose of the role in your server rules/pings so users can opt in/out.
+
+---
+
 
 ### Moderation Tools
 
@@ -748,6 +790,7 @@ Other attack management commands:
 #### Stats Management:
 - `/stats add bug_kills:100 bot_kills:50 missions_completed:5` - Add to server-wide statistics
 - `/stats reset` - Reset all server statistics (requires confirmation)
+
 
 ## Support & Credits
 
