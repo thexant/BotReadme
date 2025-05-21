@@ -46,6 +46,7 @@ As a server admin, your first steps should be:
 1. Set up the deployment channel with `/setchannel #channel-name`
 2. Configure the minigame channel with `/setminigamechannel #channel-name`
 3. Set up LFG roles with `/enablelfg @Role`
+4. Set up the automatic Voice Channel category with `/setvccategory [category]`
 
 As a user, start by:
 1. Using the **Quick Deploy** button or `/deploy me` to set your status
@@ -190,10 +191,10 @@ This will:
 Create a temporary voice channel for your squad:
 
 ```
-/squadvc SquadName
+/deploy me vc_name:SquadName
 ```
 
-This creates a voice channel named "Squad SquadName" with a limit of 4 users. The channel will:
+This creates a voice channel named "Squad SquadName" (in this example) with a limit of 4 users. The channel will:
 - Automatically delete when empty
 - Be linked to your deployment status
 - Be accessible to those who join your squad
