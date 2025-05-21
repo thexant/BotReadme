@@ -39,6 +39,17 @@ This comprehensive guide covers all features of the Helldivers 2 Utility Bot, de
 - [Support & Credits](#support--credits)
 
 
+## ⚠️ Quick Setup Summary (Admins, Read This First)
+
+Before anything else:
+1. **DO NOT** set `/setminigamechannel` to your LFG or chat channels. It should be an isolated, low-traffic channel.
+2. **DO NOT** assign general roles like `@everyone` or `@here` as LFG roles.
+   - Use a specific role like `@LFG`, `@ReadyUp`, or `@HD Players`
+   - If unsure, create a new one just for LFG pings.
+
+Proper setup ensures channels aren’t spammed and players don’t get irrelevant pings.
+
+---
 
 ## Getting Started
 
@@ -55,18 +66,6 @@ As a user, start by:
 2. Check who's playing with `/active`
 3. Create your Helldiver profile card with `/helldiverinfo create`
 
-
-## ⚠️ Quick Setup Summary (Admins, Read This First)
-
-Before anything else:
-1. **DO NOT** set `/setminigamechannel` to your LFG or chat channels. It should be an isolated, low-traffic channel.
-2. **DO NOT** assign general roles like `@everyone` or `@here` as LFG roles.
-   - Use a specific role like `@LFG`, `@ReadyUp`, or `@HD Players`
-   - If unsure, create a new one just for LFG pings.
-
-Proper setup ensures channels aren’t spammed and players don’t get irrelevant pings.
-
----
 
 ## Deployment System
 
