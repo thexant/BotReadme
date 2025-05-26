@@ -539,7 +539,7 @@ Equipment is divided into categories:
 Remember to report your mission outcomes honestly for the true Penitent Crusade experience!
 
 ## Minigames
-
+The minigame is getting an overhaul soon! Stay tuned!
 ### Server Attack Defense
 
 The Server Attack minigame simulates defensive scenarios:
