@@ -650,6 +650,12 @@ Admins can manually spawn pods with specific contents for events or rewards.
 ```
 - Admins can use this to select which category new voice channels will be created under.
 
+**4B. Configure Autodeployment Voice Channels**
+```
+/setdeploymentchannel [Channel Name]
+```
+- This command sets existing voice channels as "Squad Channels". Members who enter these will be automatically deployed and/or grouped.
+
 **5. Set LFG Role**
 ```
 /enablelfg @LFG
@@ -709,7 +715,7 @@ Detailed explanation of channel setup commands:
 - `/disablegrindrole` - Removes the grinding role setting
 
 **✅ GOOD Role Examples:**
-- `@LFG`, `@HD Players`, `@Ready to Drop`
+- `@LFG`, `@HD Players`, `@Squad`
 
 **❌ BAD Role Examples:**
 - `@everyone`, `@Members`, `@Gamers` (broad roles)
@@ -780,14 +786,14 @@ Other attack management commands:
 - `/medal edit @user "Heart of Steel" new_name:"Steel Heart" citation:"Updated citation"` - Edit a medal
 
 #### Order Management:
-- `/orders create title:"Operation Firestorm" text:"Eliminate Terminid presence on Meridia" until:"MM/DD HH:MM" planets:"Meridia,Draupnir" factions:"Terminids"` - Create a new order
-- `/orders stats bug_kills:500 bot_kills:250 squid_kills:100` - Update order statistics
+- `/orders create order_id:[shortname for admin reference] title:"Operation Terminid Kill" text:"Eliminate Terminid presence on Bore Rock once and for all" until:"MM/DD HH:MM" planets:"Bore Rock" factions:"Terminids"` - Create a new order
+- `/orders update [order_id]` - Update order statistics
 - `/orders goals bug_kills:1000 bot_kills:500 squid_kills:200` - Set goals for order statistics
 - `/orders clear` - Clear the current order
 - `/orders reset` - Reset order statistics
 
 #### Stats Management:
-- `/stats add bug_kills:100 bot_kills:50 missions_completed:5` - Add to server-wide statistics
+- `/stats update` - Add to server-wide statistics
 - `/stats reset` - Reset all server statistics (requires confirmation)
 
 
