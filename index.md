@@ -539,86 +539,165 @@ Equipment is divided into categories:
 Remember to report your mission outcomes honestly for the true Penitent Crusade experience!
 
 ## Minigames
-The minigame is getting an overhaul soon! Stay tuned!
-### Server Attack Defense
 
-The Server Attack minigame simulates defensive scenarios:
+The minigame system has been completely overhauled with multiple interconnected systems including stratagem crafting with progression, dynamic missions, player economy, and server defense events.
 
-1. Admins create an attack with requirements for defensive supplies
-2. Players craft and donate supplies to defend against the attack
-3. If enough supplies are gathered before the time expires, everyone succeeds
-4. If not enough supplies are gathered, all players lose their inventory
+### Stratagem Crafting & Leveling System
 
-#### User Commands:
-- `/givesupplies supply:Orbital Precision Strike quantity:2` - Donate supplies to defense
-- `/givesupplies category:offensive quantity:3` - Donate random supplies of a category
-- `/attackshow` - Show the current attack status
-
-The supplies are categorized as:
-- **Offensive**: Combat-focused stratagems
-- **Defensive**: Protection and fortification stratagems
-- **Support**: Utility and assistance stratagems
-
-### Stratagem Crafting
-
-In the designated minigame channel, craft stratagems by typing their directional sequences:
+In the designated minigame channel, craft stratagems by typing their directional sequences to gain XP and unlock new equipment:
 
 Examples:
 - `→→↑` - Craft an Orbital Precision Shell
 - `↑→↓↓↓` - Craft an Eagle 500kg Bomb
 
-Each successfully crafted stratagem is added to your inventory, which you can view with:
-```
-/equipment
-/equipment @Username
-```
+**Leveling System:**
+- Gain XP from crafting: **Offensive stratagems** give 2 XP, **Defensive/Support** give 1 XP
+- Level up to unlock new stratagems and equipment
+- View your progress with `/level` or `/level @Username`
+- Check what you can craft with `/craftable` or `/cancraft [stratagem_name]`
 
-To see available stratagems:
-```
-/liststratagems
-```
+**Level Commands:**
+- `/level` - View your crafting level and XP progress
+- `/craftable` - Show stratagems you can currently craft
+- `/cancraft [stratagem_name]` - Check if you can craft a specific item
+- `/liststratagems [level_filter]` - List all craftable stratagems by level
+
+**Equipment Management:**
+- `/equipment` - View your crafted equipment inventory
+- `/equipment @Username` - View someone else's equipment
 
 #### Boosters:
-Found in escape pods or awarded by admins, boosters multiply your crafting output:
-- **Double**: Produces 2× the normal output
+Boosters multiply your crafting output and are found in escape pods:
+- **Double**: Produces 2× the normal output  
 - **Triple**: Produces 3× the normal output
 
-Activate a booster:
-```
-/booster booster_type:double duration:30
-```
+- Example of activating a booster: `/booster booster_type:double duration:30`
+- To check active boosters: `/showboosters`
+Multiple boosters stack multiplicatively!
 
-Check active boosters:
-```
-/showboosters
-```
+### Mission System
 
-Multiple boosters stack multiplicatively - having both a double and triple active would give 6× output!
+Dynamic missions spawn periodically offering XP and requisition rewards:
+
+**Mission Flow:**
+1. Missions spawn randomly in the minigame channel with a **🎯 Claim Mission** button
+2. First player to claim gets 30 minutes to select their loadout
+3. Choose equipment from your inventory (requires 1 weapon + 1 armor minimum)
+4. Mission executes automatically with real-time progress updates
+5. Success depends on your equipment power vs mission difficulty
+
+**Mission Commands:**
+- `/mission status` - Check current mission status
+- `/mission help` - Show mission system guide
+- `/requisition` - Check your requisition currency balance
+
+**Admin Mission Commands:**
+- `/spawnmission` - Manually spawn a mission with custom parameters
+- `/clearmission` - Clear the current active mission
+- `/missioninfo` - Show detailed mission information
+
+Missions have different objectives (Destroy, Extract, Defend, Infiltrate, Sabotage), environments (Urban, Desert, Jungle, Arctic, Industrial), and optional modifiers that affect difficulty and rewards.
+
+### Economy & Trading System
+
+#### Shop System
+
+Use requisition currency to buy and sell items with other players:
+
+**Shopping Commands:**
+- `/shop browse` - Open the interactive shop interface with:
+  - **🛒 User Listings**: Items sold by other players
+  - **🎲 Rotating Stock**: Limited-time items from the Requisitions Officer (rotates every 6 hours)
+  - **📦 My Listings**: Manage your own sales
+
+- `/shop list [item] [quantity] [price]` - List an item for sale
+- `/shop help` - Learn about the shop system
+
+**Example:**
+`/shop list item:"Orbital Laser Heatsink" quantity:2 price:500`
+#### Trading System
+
+Direct player-to-player item trading:
+
+- `/trade offer @user [item] [quantity]` - Offer a trade to another player
+- `/trade accept [trade_id]` - Accept a trade offer
+- `/trade cancel [trade_id]` - Cancel your trade offer  
+- `/trade list` - View pending trades involving you
+- `/trade history` - View your recent trade history
+
+**Example:**
+`/trade offer @Friend item:"Eagle 500kg Bomb" quantity:3`
+Trades expire after 24 hours if not accepted.
 
 ### Escape Pods
 
-Escape pods randomly spawn in the minigame channel:
-1. A message appears: "🚀 An Escape Pod Drifts In…"
-2. Type `SALUTE` to claim its contents
-3. The first person to respond gets the reward
+Two types of escape pods spawn in the minigame channel:
 
-Possible contents:
-- Random stratagems (1-5 of various types)
-- Crafting boosters (double or triple, with durations from 5-60 minutes)
+#### Normal Escape Pods
+- Spawn hourly with 25% chance if no pod exists
+- Type `SALUTE` to claim contents
+- Rewards: Random stratagems, boosters, XP, and requisition currency
 
-Admins can manually spawn pods with specific contents for events or rewards.
+#### Rare Escape Pods  
+- Spawn every 4 hours with 25% chance
+- **⚠️ Expire after 10 minutes!**
+- Contain premium rewards: **rare weapons**, **rare armor**, higher XP/requisition
+- Announced with gold embed and countdown timer
+
+**Admin Pod Commands:**
+- `/spawnpod` - Spawn a normal pod with optional custom contents
+- `/spawnrarepod` - Spawn a rare pod with premium rewards
+
+### Weapons & Armor System
+
+The minigame now includes rare weapons and armor that provide different power levels for missions:
+
+**Rare Weapons**: Various categories including precision, energy, explosive, and incendiary types
+**Rare Armor**: Different types including heavy, stealth, and standard variants  
+
+- Everyone starts with permanent **AR-23 Liberator** (weapon) and **B-01 Tactical** armor
+- Find additional weapons and armor in rare escape pods or purchase from the shop
+- Different equipment provides different mission power bonuses
+- Equipment is consumed when used in missions (except permanent starter gear)
+
+### Server Attack Defense
+
+Server-wide defense events where players contribute supplies:
+
+**User Commands:**
+- `/givesupplies supply:"Orbital Precision Strike" quantity:2` - Donate specific supplies
+- `/givesupplies category:offensive quantity:3` - Donate random supplies of a category  
+- `/attackshow` - Show/refresh the current attack status
+
+**Admin Commands:**
+- `/attack create` - Start a new server attack with supply requirements
+- `/attack end [outcome]` - End attack (auto/success/failure)
+- `/attack help` - Show attack command help
+
+If the defense fails, all players lose their entire inventory!
+
+### Additional Features
+
+**Utility Commands:**
+- `/roll [sides]` - Roll dice (defaults to d20, use 6 for standard die)
+- `/minigamehelp` - Show overview of all minigame systems
+
+**Admin Setup:**
+- `/setminigamechannel #channel` - **CRITICAL**: Set dedicated minigame channel
+  - ❌ **Never use LFG or General Chat channels**
+  - ✅ **Use a dedicated channel** (e.g., `#stratagem-lab`, `#minigames`, `#bot-games`)
+  - This channel receives crafting inputs, pod spawns, mission announcements
 
 ### ⚠️ Important Setup Note
 > The `/setminigamechannel` command must **not** be used in high-traffic channels (like LFG or general chat). This channel will receive:
-> - Stratagem crafting inputs
-> - Escape pod messages
-> - Booster messages
+> - Stratagem crafting inputs (directional sequences)
+> - Escape pod messages and claims
+> - Mission announcements and progress
+> - Shop announcements
+> - Trade notifications
 > - Supply contribution messages
 >
-> Choose or create a **dedicated minigame channel** for these features to prevent clutter and confusion.
-
-(*Keep rest of minigames section unchanged*)
-
+> Choose or create a **dedicated minigame channel** for these features to prevent clutter and confusion in your main server channels.
 ---
 ## Administration
 
@@ -696,6 +775,8 @@ Detailed explanation of channel setup commands:
 - `/createactivelist` - Creates a persistent, auto-updating list of active players in the current channel
 
 - `/orders channel` - Sets the current channel for order notifications
+
+- `/setdeploymentchannel` - Set a voice channel to auto-deploy users when they connect. Multiple can be set (command must be re-run to set multiple).
 
 - Keep deployment and minigame activity separate from main server activity channels.
 
