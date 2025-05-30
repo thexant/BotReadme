@@ -761,9 +761,11 @@ If the defense fails, all players lose their entire inventory!
 - These should be voice channels that are dedicated, in view, not mixed with other channels and set so that users cannot connect, but can see.
 
 **8. (Optional) Enable Global LFG**
-`/enablegloballfg [guilds]` 
+```/enablegloballfg [guilds]```
 - This enables global LFG for your server, allowing it to recieve global pings from other servers. Adding Server ID's in the optional field will restrict the global pings your server recieves to ones from those servers. More can be added with: `/addgloballfg`. The feature can be disabled with `/disablegloballfg`
+
 ---
+
 ### Channel Configuration
 
 Detailed explanation of channel setup commands:
