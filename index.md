@@ -420,7 +420,7 @@ The Penitent Crusade is a progression system where you complete increasingly dif
   ```
   /crusade join @Username
   ```
-  Join another player's crusade (only possible at the beginning of their crusade).
+  Join another player's crusade (CURRENTLY NOT FUNCTIONAL AND REMOVED FOR FIXING).
 
 - **Viewing Crusade Status**:
   ```
@@ -508,7 +508,7 @@ Equipment is divided into categories:
   ```
   /crusade leave
   ```
-  Leave a crusade you've joined (cannot leave your own crusade).
+  Leave a crusade you've joined (command removed until group crusades are fixed).
 
 - **Abandoning Your Crusade**:
   ```
