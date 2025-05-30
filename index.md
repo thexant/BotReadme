@@ -64,6 +64,7 @@ As a server admin, your first steps should be:
 2. Configure the minigame channel with `/setminigamechannel #channel-name`
 3. Set up LFG roles with `/enablelfg @Role`
 4. Set up the automatic Voice Channel category with `/setvccategory [category]`
+5. Optionally, set up Global LFG with `/enablegloballfg`
 
 As a user, start by:
 1. Using the **Quick Deploy** button or `/deploy me` to set your status
@@ -86,7 +87,7 @@ The **Quick Deploy** button provides a simple, guided setup process:
 3. Choose "Deploy" if you're actively playing or "Standby" if you're looking for a group
 4. Follow the simple step-by-step prompts to set up your status
 5. Choose whether to ping the LFG role to notify others
-
+6. Choose whether to notify other servers that have Global LFG enabled (if yours does).
 This is the easiest and most user-friendly way to set your status in the server.
 
 ### Basic Deployment
@@ -114,6 +115,7 @@ When using `/deploy me`, you can customize your status with these optional param
 - `ping:` - Whether to ping the LFG role (true/false)
 - `grinding:` - Whether to ping the grinding role for resource farming (true/false)
 - `vc_name:` - Create a temporary squad voice channel after deploying
+- `global` - whether to deploy globally, omitting this defaults deployments to local.
 
 Examples:
 ```
@@ -709,7 +711,7 @@ If the defense fails, all players lose their entire inventory!
 
 **1. Set Deployment Channel**
 ```
-/setchannel #deployment-channel
+/setchannel #deployment-lfg-channel
 ```
 - Sends deployment status, SOS alerts, and Quick Deploy buttons
 - Should be a central channel, dedicated to users looking to group up.
@@ -719,12 +721,12 @@ If the defense fails, all players lose their entire inventory!
 /setminigamechannel #minigames
 ```
 - ❌ **Never use LFG or a General Chat**
-- ✅ Use a dedicated channel (e.g., `#stratagem-lab`, `#minigames`, `#stratagem-clicker`, `#bot-minigames`)
+- ✅ Use a dedicated channel (e.g., `#stratagem-lab`, `#minigame`, `#stratagem-clicker`, `#bot-minigames`)
 
 **3. Set Welcome Channel**
-```
-/setwelcomechannel #welcome
-```
+
+`/setwelcomechannel #welcome`, `/setwelcomechannel #general`
+
 - New members get a brief greeting embed here
 
 **4. Configure VC Category**
@@ -758,6 +760,11 @@ If the defense fails, all players lose their entire inventory!
 ```
 - These should be voice channels that are dedicated, in view, not mixed with other channels and set so that users cannot connect, but can see.
 ---
+**8. (Optional) Enable Global LFG
+`/enablegloballfg [guilds]` 
+- This enables global LFG for your server, allowing it to recieve global pings from other servers. Adding Server ID's in the optional field will restrict the global pings your server recieves to ones from those servers. More can be added with:
+`/addgloballfg`
+- The feature can be disabled with `/disablegloballfg`
 
 ### Channel Configuration
 
