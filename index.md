@@ -21,11 +21,12 @@ This comprehensive guide covers all features of the Helldivers 2 Utility Bot, de
   - [Medal System](#medal-system)
   - [Helldiver Info Cards](#helldiver-info-cards)
   - [Bulletins/Dispatches](#bulletinsdispatches)
-- [Game Management](#game-management)
+- [Game Management and Other Features](#game-management)
   - [War Orders](#war-orders)
   - [Server Statistics](#server-statistics)
   - [Loadout System](#loadout-system)
   - [Penitent Crusades](#penitent-crusades)
+  - [Patriotic Fact Checking](#fact-checking)
 - [Minigames](#minigames)
   - [Stratagem Crafting & Leveling System](#stratagem-crafting--leveling-system)
   - [Mission System](#mission-system)
@@ -531,6 +532,9 @@ Equipment is divided into categories:
 
 Remember to report your mission outcomes honestly for the true Penitent Crusade experience!
 
+### Fact Checking
+
+When the bot is in a server, users can right click (or long press) on any message, select "Apps" in the menu and then 'Fact Check' True or False to quote the message in a "Patriotic Truth" or "Dissident Propaganda" fact check embed.
 ## Minigames
 
 The minigame system has been completely overhauled with multiple interconnected systems including stratagem crafting with progression, dynamic missions, player economy, and server defense events.
