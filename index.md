@@ -680,7 +680,7 @@ If the defense fails, all players lose their entire inventory!
   - This channel receives crafting inputs, pod spawns, mission announcements
 
 ### ⚠️ Important Setup Note
-> The `/setminigamechannel` command must **not** be used in high-traffic channels (like LFG or general chat). This channel will receive:
+> The minigame channel must **not** be used in high-traffic channels (like LFG or general chat). This channel will receive:
 > - Stratagem crafting inputs (directional sequences)
 > - Escape pod messages and claims
 > - Mission announcements and progress
