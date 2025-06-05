@@ -35,8 +35,6 @@ This comprehensive guide covers all features of the Helldivers 2 Utility Bot, de
   - [Additional Features](#additional-features)
 - [Administration](#administration)
   - [Initial Server Setup](#initial-server-setup)
-  - [Channel Configuration](#channel-configuration)
-  - [Role Management](#role-management)
   - [Moderation Tools](#moderation-tools)
   - [Attack Management](#attack-management)
   - [Stats & Orders Management](#stats--orders-management)
@@ -677,7 +675,6 @@ If the defense fails, all players lose their entire inventory!
 - `/minigamehelp` - Show overview of all minigame systems
 
 **Admin Setup:**
-- `/setminigamechannel #channel` - **CRITICAL**: Set dedicated minigame channel
   - ❌ **Never use LFG or General Chat channels**
   - ✅ **Use a dedicated channel** (e.g., `#stratagem-lab`, `#minigames`, `#bot-games`)
   - This channel receives crafting inputs, pod spawns, mission announcements
