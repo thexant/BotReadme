@@ -270,21 +270,21 @@ Each medal has a custom name, citation, and optional emoji that appears on the p
 Create and customize your Helldiver profile card:
 
 ```
-/helldiverinfo create level:50 title:Commander enlistment_date:2024-10-15 primary:"AR-23 Liberator" quote:"For Democracy!" clans:"14th Ursine Corps" preferred_enemies:Terminids fav_stratagem:"Orbital Precision Strike" support:"EAT-17" homeworld:Earth
+/helldiverinfo create level:50 title:Commander enlistment_date:2024-10-15 primary:"AR-23 Liberator" quote:"For Democracy!" clans:"14th Ursine Corps" preferred_enemies:Terminids fav_stratagem:"Orbital Precision Strike" support:"EAT-17" homeworld:Super Earth
 ```
 
 Update individual fields:
 - `/helldiverinfo edit`
 
 Add special icons:
-- `/helldiverinfo set-rank-icon` - Choose from military ranks (Cadet to General)
-- `/helldiverinfo set-special-icon` - Choose from special designations (like ViperCommando)
+- `/helldiverinfo set-rank-icon` - Choose from Helldiver military ranks
+- `/helldiverinfo set-special-icon` - Choose from special designations (Warbond icons, like Viper Commando)
 
 View cards:
 - `/helldiverinfo show` - See your own card
 - `/helldiverinfo show @Username` - View someone else's card
 
-The cards show a futuristic date (Earth year + 160) for the enlistment date to match Helldivers lore.
+The cards show a futuristic date (Real year + 160) for the enlistment date to match Helldivers lore.
 
 ### Bulletins/Dispatches
 
@@ -309,7 +309,7 @@ Bulletins automatically expire after 7 days if not updated.
 
 ### War Orders
 
-War Orders are server-wide objectives that players can work toward together:
+Orders are server-wide objectives that players can work toward together:
 
 #### User Commands:
 - `/orders` - View the current order
@@ -317,9 +317,9 @@ War Orders are server-wide objectives that players can work toward together:
 
 Orders can include:
 - Specific faction targets (e.g., "Eliminate Terminids")
-- Planet destinations (e.g., "Defend Meridia")
-- Statistical goals (e.g., Kill X enemies, collect Y samples)
-- Time limits (orders expire after a set time)
+- Planet destinations (e.g., "Bore Rock")
+- Statistical goals (e.g., Kill X enemies, collect Y samples, do Z custom)
+- Time limits (orders expire at a set date & time)
 
 Progress is tracked with progress bars showing completion percentage for each objective and overall completion.
 
@@ -343,7 +343,7 @@ Statistics tracked include:
 - Side objectives completed
 - Helldivers KIA
 
-These stats integrate with the War Orders system.
+These stats integrate with the War Orders system, when stats are added to an orders progress, your server stats update too, and vice versa.
 
 ### Loadout System
 
