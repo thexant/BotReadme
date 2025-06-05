@@ -131,7 +131,7 @@ You can also update individual fields without touching others:
 
 ### Standby Mode
 
-When you're not actively playing but want to find a group:
+When you're not actively playing but want to find a group. Standby mode can be accessed through the **Quick Deploy** button, but if you prefer using commands, they are below:
 
 ```
 /deploy standby faction_prefs:Terminids,Automatons difficulty_prefs:3,4,5 notes:Looking for casual play
