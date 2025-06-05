@@ -83,6 +83,7 @@ The **Quick Deploy** button provides a simple, guided setup process:
 4. Follow the simple step-by-step prompts to set up your status
 5. Choose whether to ping the LFG role to notify others
 6. Choose whether to notify other servers that have Global LFG enabled (if yours does).
+
 This is the easiest and most user-friendly way to set your status in the server.
 
 ### Basic Deployment
