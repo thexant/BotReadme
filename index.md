@@ -270,7 +270,7 @@ Each medal has a custom name, citation, and optional emoji that appears on the p
 Create and customize your Helldiver profile card:
 
 ```
-/helldiverinfo create level:50 title:Commander enlistment_date:2023-10-15 primary:"AR-23 Liberator" quote:"For Democracy!" clans:"14th Ursine Corps" preferred_enemies:Terminids fav_stratagem:"Orbital Precision Strike" support:"EAT-17" homeworld:Earth
+/helldiverinfo create level:50 title:Commander enlistment_date:2024-10-15 primary:"AR-23 Liberator" quote:"For Democracy!" clans:"14th Ursine Corps" preferred_enemies:Terminids fav_stratagem:"Orbital Precision Strike" support:"EAT-17" homeworld:Earth
 ```
 
 Update individual fields:
