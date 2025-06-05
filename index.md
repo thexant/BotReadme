@@ -147,7 +147,7 @@ Parameters:
 - `ping:` - Whether to ping the LFG role (true/false)
 - `grinding:` - Whether to ping the grinding role (true/false)
 
-Your standby status will be visible to others in the `/active` list, making it easy for them to invite you. If your prefernces match another standby user's preferences, the bot will ping you both and suggest you group up, sending a Quick Deploy button with its message.
+Your standby status will be visible to others in the `/active` list, making it easy for them to invite you. If your preferences match another standby user's preferences, the bot will ping you both and suggest you group up, sending a Quick Deploy button with its message.
 
 ### Voice Channel Integration
 
