@@ -86,6 +86,8 @@ The **Quick Deploy** button provides a simple, guided setup process:
 
 This is the easiest and most user-friendly way to set your status in the server.
 
+**Remember to use `/undeploy` when you're done!**
+
 ### Basic Deployment
 
 If you prefer using commands directly:
@@ -152,7 +154,7 @@ Your standby status will be visible to others in the `/active` list, making it e
 The bot monitors voice channel activity for enhanced features:
 
 - When you join a voice channel while deployed, it updates your status
-- When you leave a voice channel while deployed, your deployment will expire after 10 minutes unless you rejoin or use a command
+- When you leave a voice channel while deployed, your deployment will expire after 5 minutes unless you rejoin or use a command to update your deployment status.
 - The bot provides a message with a countdown when your deployment is set to expire
 
 ## Squad Management
