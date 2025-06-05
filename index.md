@@ -77,7 +77,7 @@ The deployment system is the core feature, tracking who's playing, looking for g
 
 The **Quick Deploy** button provides a simple, guided setup process:
 
-1. Find the Quick Deploy button in your server's deployment channel
+1. Find the Quick Deploy button in your server's deployment channel, or create a new one with `/deploy button`
 2. Click it to start the deployment wizard
 3. Choose "Deploy" if you're actively playing or "Standby" if you're looking for a group
 4. Follow the simple step-by-step prompts to set up your status
