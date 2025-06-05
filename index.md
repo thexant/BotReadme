@@ -46,7 +46,7 @@ This comprehensive guide covers all features of the Helldivers 2 Utility Bot, de
 ## ⚠️ Quick Setup Summary (Admins, Read This First)
 
 Before anything else:
-1. **DO NOT** set `/setminigamechannel` to your LFG or chat channels. It should be an isolated, low-traffic channel.
+1. **DO NOT** set your minigame channel to your LFG or chat channels. It should be an isolated, low-traffic channel.
 2. **DO NOT** assign general roles like `@everyone` or `@here` as LFG roles.
    - Use a specific role like `@LFG`, `@ReadyUp`, or `@HD Players`
    - If unsure, create a new one just for LFG pings.
@@ -59,15 +59,10 @@ Proper setup ensures channels aren’t spammed and players don’t get irrelevan
 
 The HD2 Utility Bot uses Discord's slash command system. Type `/` followed by the command name to use any feature.
 
-As a server admin, your first steps should be:
-1. Set up the deployment channel with `/setchannel #channel-name`
-2. Configure the minigame channel with `/setminigamechannel #channel-name`
-3. Set up LFG roles with `/enablelfg @Role`
-4. Set up the automatic Voice Channel category with `/setvccategory [category]`
-5. Optionally, set up Global LFG with `/enablegloballfg`
+As a server admin, your first step should be to run the setup wizard using `/setup` and configure the bot to your liking. Most of the steps are optional.
 
 As a user, start by:
-1. Using the **Quick Deploy** button or `/deploy me` to set your status
+1. Using the **Quick Deploy** button to set your status
 2. Check who's playing with `/active`
 3. Create your Helldiver profile card with `/helldiverinfo create`
 
@@ -163,11 +158,7 @@ The bot monitors voice channel activity for enhanced features:
 
 ### Joining Others
 
-To join another player's deployment:
-
-```
-/join @Username
-```
+To join another player's deployment press the green ***JOIN*** button below their status.
 
 This will:
 1. Update your status to match theirs (faction, planet, difficulty)
@@ -208,11 +199,7 @@ This will:
 
 ### Squad Voice Channels
 
-Create a temporary voice channel for your squad:
-
-```
-/deploy me vc_name:SquadName
-```
+Create a temporary voice channel for your squad by setting Squad Comms in the Quick Deploy Wizard, or using `/squadvc SquadName`
 
 This creates a voice channel named "Squad SquadName" (in this example) with a limit of 4 users. The channel will:
 - Automatically delete when empty
@@ -249,6 +236,13 @@ As commendations accumulate, users earn special descriptions based on their tota
 - 50-99: "A distinguished Helldiver with exceptional support skills."
 - 100+: "A living legend of coordination and camaraderie."
 
+### Martyrs System
+Similar to commendations, Martyrs let you recognize when teammates give the ultimate sacrifice for democracy.
+You must be deployed and in a group with team members to engrave their name on the "Wall of Martyrs".
+- `/martyr @user` - Add a user to the Wall of Martyrs
+- `/wallofmartyrs` - View your servers wall of Martyrs
+
+  
 ### Medal System
 
 Medals are special awards given by admins to recognize achievements:
@@ -277,13 +271,7 @@ Create and customize your Helldiver profile card:
 ```
 
 Update individual fields:
-- `/helldiverinfo set-level 55` - Update your level
-- `/helldiverinfo set-title "General"` - Change your title
-- `/helldiverinfo set-enlistment 2023-12-01` - Change enlistment date
-- `/helldiverinfo set-homeworld "Mars"` - Change your home planet
-- `/helldiverinfo set-quote "No democracy without liberty"` - Change your quote
-- `/helldiverinfo set-stratagem "Orbital Barrage"` - Change favorite stratagem
-- `/helldiverinfo set-support "Recoilless Rifle"` - Change favorite support weapon
+- `/helldiverinfo edit`
 
 Add special icons:
 - `/helldiverinfo set-rank-icon` - Choose from military ranks (Cadet to General)
@@ -708,103 +696,9 @@ If the defense fails, all players lose their entire inventory!
 ## Administration
 
 ### Initial Server Setup
-
-**1. Set Deployment Channel**
-```
-/setchannel #deployment-lfg-channel
-```
-- Sends deployment status, SOS alerts, and Quick Deploy buttons
-- Should be a central channel, dedicated to users looking to group up.
-
-**2. Set Minigame Channel**
-```
-/setminigamechannel #minigames
-```
-- ❌ **Never use LFG or a General Chat**
-- ✅ Use a dedicated channel (e.g., `#stratagem-lab`, `#minigame`, `#stratagem-clicker`, `#bot-minigames`)
-
-**3. Set Welcome Channel**
-
-`/setwelcomechannel #welcome`, `/setwelcomechannel #general`
-
-- New members get a brief greeting embed here
-
-**4. Configure VC Category**
-```
-/setvccategory "Squad Channels"
-```
-- Admins can use this to select which category new voice channels will be created under.
-
-**4B. Configure Autodeployment Voice Channels**
-```
-/setdeploymentchannel [Channel Name]
-```
-- This command sets existing voice channels as "Squad Channels". Members who enter these will be automatically deployed and/or grouped.
-
-**5. Set LFG Role**
-```
-/enablelfg @LFG
-```
-- ❌ Do NOT use `@everyone` or roles that include every server member
-- ✅ Create a new role if necessary (`@Helldivers`, `@LFG`, `@deployments`)
-
-**6. Set Grinding Role (optional)**
-```
-/enablegrindrole @Grinding
-```
-- Like the LFG role, this should be a **specific role**, not a general one
-
-**7. (Optional) Configure Status Counters**
-```
-/setstatuscounters deployed_channel:"Deployed Count" standby_channel:"Standby Count" assist_channel:"Assisting Count"
-```
-- These should be voice channels that are dedicated, in view, not mixed with other channels and set so that users cannot connect, but can see.
-
-**8. (Optional) Enable Global LFG**
-```/enablegloballfg [guilds]```
-- This enables global LFG for your server, allowing it to recieve global pings from other servers. Adding Server ID's in the optional field will restrict the global pings your server recieves to ones from those servers. More can be added with: `/addgloballfg`. The feature can be disabled with `/disablegloballfg`
-
----
-
-### Channel Configuration
-
-Detailed explanation of channel setup commands:
-
-- `/setchannel #channel` - Sets where deployment statuses appear
-  - Creates the Quick Deploy button
-  - Deployment status cards appear here
-  - LFG and SOS alerts are sent here
-
-- `/setminigamechannel #channel` - Sets where minigames occur
-  - Stratagem crafting sequences work here
-  - Escape pods spawn here
-  - Attack notifications appear here
-
-- `/setwelcomechannel #channel` - Sets where welcome messages appear
-  - New member welcome embeds appear here
-
-- `/createactivelist` - Creates a persistent, auto-updating list of active players in the current channel
-
-- `/orders channel` - Sets the current channel for order notifications
-
-- `/setdeploymentchannel` - Set a voice channel to auto-deploy users when they connect. Multiple can be set (command must be re-run to set multiple).
-
-- Keep deployment and minigame activity separate from main server activity channels.
-
-### Role Management
-
-- `/enablelfg @Role` - Sets the role to ping for LFG notifications
-  - This role is pinged when users deploy with `ping:true`
-  - It's also pinged for SOS calls
-  - Members can opt to ping this role by default with `/setlfgpref true`
-
-- `/disablelfg` - Removes the LFG role setting
-
-- `/enablegrindrole @Role` - Sets the role for grinding notifications
-  - Pinged when users deploy with `grinding:true`
-  - Useful for organizing farming groups
-
-- `/disablegrindrole` - Removes the grinding role setting
+- Server setup has been streamlined into a simple Setup Wizard. Admins should use the command `/setup` to pull up the Setup Wizard.
+- Changes can be made in the future to edit configuration without adjusting settings you dont change.
+- Setup allows you to set your LFG channel, your minigames channel, your LFG roles, your VC Category, and almost every other configurable feature.
 
 **✅ GOOD Role Examples:**
 - `@LFG`, `@HD Players`, `@Squad`
@@ -883,7 +777,7 @@ Other attack management commands:
 - `/orders goals bug_kills:1000 bot_kills:500 squid_kills:200` - Set goals for order statistics
 - `/orders clear` - Clear the current order
 - `/orders reset` - Reset order statistics
-
+- `/orders add_guild [order_ID] [guild_ID]` - Add another server as a participant on your order.
 #### Stats Management:
 - `/stats update` - Add to server-wide statistics
 - `/stats reset` - Reset all server statistics (requires confirmation)
