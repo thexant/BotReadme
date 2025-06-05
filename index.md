@@ -17,6 +17,7 @@ This comprehensive guide covers all features of the Helldivers 2 Utility Bot, de
   - [Squad Voice Channels](#squad-voice-channels)
 - [Social Features](#social-features)
   - [Commendation System](#commendation-system)
+  - [Martyrs System](#martyrs-system)
   - [Medal System](#medal-system)
   - [Helldiver Info Cards](#helldiver-info-cards)
   - [Bulletins/Dispatches](#bulletinsdispatches)
