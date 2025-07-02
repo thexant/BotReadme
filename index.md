@@ -2,6 +2,10 @@
 
 This comprehensive guide covers all features of the Helldivers 2 Utility Bot, designed to enhance your Discord community with deployment tracking, squad management, minigames, and more.
 
+
+[Terms of Service](https://thexant.github.io/BotReadme/TOS)
+[Privacy Policy](https://thexant.github.io/BotReadme/PrivacyPolicy)
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)
