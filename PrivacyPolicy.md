@@ -1,6 +1,6 @@
 # Privacy Policy for HD2 Utility Bot
 
-**Effective Date:** January 1, 2025
+**Effective Date:** July 1st 2025.
 
 ## Introduction
 
