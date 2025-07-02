@@ -4,6 +4,7 @@ This comprehensive guide covers all features of the Helldivers 2 Utility Bot, de
 
 
 [Terms of Service](https://thexant.github.io/BotReadme/TOS)
+
 [Privacy Policy](https://thexant.github.io/BotReadme/PrivacyPolicy)
 
 ## Table of Contents
