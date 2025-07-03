@@ -23,6 +23,7 @@ You may choose to provide:
 - **Custom Notes**: Personal messages for other players
 - **Clan Information**: Clan affiliations and memberships
 - **Never provide personal information through the bot**.
+- *Note: While we do not collect names, emails, or other sensitive information, data such as Discord User IDs and HELLDIVERS 2 friend codes may be considered personal information under certain privacy laws. We treat this data with the same care and compliance.*
 
 ### Game Activity Data
 We collect data related to your bot usage:
