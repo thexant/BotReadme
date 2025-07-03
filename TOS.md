@@ -64,9 +64,8 @@ HD2 Utility Bot is a Discord bot designed for Helldivers 2 gaming communities th
 
 ### Moderation
 - Server administrators have authority over Bot usage in their servers
-- We may take action against users who violate these Terms
-- Actions may include warnings, temporary restrictions, or permanent bans
-- Appeals can be made through our support server
+- Server owners should take appropriate action against users violating terms within their servers.
+- Contact us in the support server for the immediate removal of data that violates any of these terms.
 
 ## 7. Data and Privacy
 
@@ -81,7 +80,7 @@ HD2 Utility Bot is a Discord bot designed for Helldivers 2 gaming communities th
 - The Bot, its code, and original content are our intellectual property
 - You may not copy, modify, or redistribute the Bot or its components
 - Helldivers 2 content belongs to Arrowhead Game Studios and Sony Interactive Entertainment
-- This bot is a fan project, made from passion for no personal or financial gain.
+- This bot is a fan project, made from passion for no personal or financial gain
 
 ### User Content
 - You retain rights to content you create using the Bot
