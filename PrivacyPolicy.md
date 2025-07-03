@@ -10,10 +10,10 @@ HD2 Utility Bot ("the Bot", "we", "us", or "our") is a Discord bot designed for 
 
 ### Automatically Collected Information
 When you use the Bot, we automatically collect:
-- **Discord User ID**: Your unique Discord identifier
-- **Discord Server (Guild) ID**: The servers where you use the Bot
+- **Discord User ID**: Your unique Discord identifier, for saving user specific data such as statuses, playercards, medals, etc
+- **Discord Server (Guild) ID**: The servers where the bot is used, for storing server configs, server announcements, etc
 - **Message IDs**: For managing bot-generated messages and interactions
-- **Voice Channel Data**: When using squad voice channel features
+- **Voice Channel Data**: When using squad (LFG and grouping) voice channel features
 
 ### Information You Provide
 You may choose to provide:
@@ -48,8 +48,8 @@ We use collected information to:
 - Data is organized by Discord server and user ID
 
 ### Security Measures
-- Access to data is restricted to the highest level of authorized bot developers, for development purposes only.
-- Regular automated backups ensure data integrity
+- Access to data is restricted to the highest level of authorized bot developers, for development and support purposes only
+- Regular secure backups ensure data integrity
 - Bot permissions are limited to necessary functions only
 
 ### Data Retention
@@ -64,8 +64,8 @@ We do not sell, rent, or trade your personal information. Limited data sharing o
 
 ### Cross-Server Features
 When enabled by server administrators:
-- Global LFG system may share deployment status across participating servers
-- Bulletin system may share announcements between allied communities
+- Global LFG system may share deployment status across participating servers, if users choose to mark their status as 'global'
+- Bulletin system may share announcements between allied communities, if those communities have a bulletins channel set
 
 ### Bot Administration
 - Authorized bot developers may access data for maintenance and support purposes
@@ -74,7 +74,7 @@ When enabled by server administrators:
 ## Your Rights and Choices
 
 ### Data Access
-- View your stored data using bot commands like `/status`, `/helldiverinfo`, and `/medals`
+- View your stored data using bot commands like `/status`, `/helldiverinfo`, and `/medals` (more in the readme)
 - Server administrators can access server-specific data through admin commands
 
 ### Data Control
